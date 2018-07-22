@@ -67,3 +67,23 @@ console.log(fruits)
 // Output: 
 // [{ name: 'banana', type: 'fruit'}, { name: 'orange', type: 'fruit'}]
 ```
+
+## find
+
+Returns the value of the first in element in the array that passes the condition inside the function.
+
+**Note**
+
+If there is two elements with the same value it will return the first one.
+
+```javascript
+var users = [
+    { name: 'Jill' },
+    { name: 'Alex' },
+    { name: 'Bill' }
+]
+
+users.find(function(user) {
+    return user.name === 'Alex'
+})
+```
