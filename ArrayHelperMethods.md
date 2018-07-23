@@ -134,3 +134,17 @@ console.log(result)
 // Output:
 // true
 ```
+
+## reduce
+
+```javascript
+var numbers = [10, 20, 30]
+
+// The first parameter of the anonymous function 
+// takes the value of the second parameter of the reduce function: which is 0
+// The second parameter of the anonymous function
+// takes the value of each element in the array
+numbers.reduce(function(sum, number) {
+    return sum + number
+}, 0)
+```
