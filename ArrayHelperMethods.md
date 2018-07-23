@@ -83,7 +83,33 @@ var users = [
     { name: 'Bill' }
 ]
 
-users.find(function(user) {
+var result = users.find(function(user) {
     return user.name === 'Alex'
 })
+
+console.log(result)
+
+// Output:
+// { name: 'Alex' }
+```
+
+## every
+
+Returns a boolean value if all elements in the array passes  the condition inside the function.
+
+```javascript
+var computers = [
+    { name: 'Apple', ram: 24 },
+    { name: 'Compaq', ram: 4 },
+    { name: 'Acer', ram: 32 }
+]
+
+var result = computers.every(function(computer) {
+    return computer.ram > 16
+})
+
+console.log(result)
+
+// Output:
+// false
 ```
