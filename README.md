@@ -199,3 +199,19 @@ hourlyWage = 45
 
 #### Note 2: You should use const and let from now on.
 
+# Template Strings
+
+Basically, it's an easy and nicer way to write a string interpolating one or more variables. Using back-ticks and a $ with curly brackets will allow you to do this.
+
+```javascript
+
+    const name = 'Robert'
+    const age = 20
+
+    let message = `My name is ${name} and I am ${age} years old`
+
+    console.log(message)
+
+    // Output:
+    // My name is Robert and I am 20 years old
+```
