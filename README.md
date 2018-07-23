@@ -173,6 +173,29 @@ numbers.reduce(function(sum, number) {
 // 60
 ```
 
+# Const and Let
 
+The **const** keywords is expect to be used when the variable is not going to be change in a future.
 
+The **let** keyword is expect to be used when the variable is going to change in a future
+
+```javascript
+
+var name = 'Jane'
+var title = 'Software Engineer'
+var hourlyWage = 40
+
+// ES6
+const name = 'Jane'
+let title = 'Software Engineer'
+let hourlyWage = 40
+
+// some time later...
+title = 'Senior Software Engineer'
+hourlyWage = 45
+
+```
+#### Note: Changing a const variable will throw an error because you declare that variable using the const keyword.
+
+#### Note 2: You should use const and let from now on.
 
