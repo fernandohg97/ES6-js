@@ -95,7 +95,7 @@ console.log(result)
 
 ## every
 
-Returns a boolean value if all elements in the array passes  the condition inside the function.
+Returns a boolean value if all elements in the array passes the condition inside the function.
 
 ```javascript
 var computers = [
@@ -112,4 +112,25 @@ console.log(result)
 
 // Output:
 // false
+```
+
+## some
+
+Returns a boolean value if any element in the array passes the condition inside the function.
+
+```javascript
+var names = [
+    'Alexandria',
+    'Matthew',
+    'Joe'
+]
+
+var result = names.some(function(name) {
+    return name.length > 4
+})
+
+console.log(result)
+
+// Output:
+// true
 ```
