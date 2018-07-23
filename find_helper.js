@@ -34,6 +34,3 @@ function postForComment(posts, comment) {
 }
 
 console.log(postForComment(posts, comment))
-
-// Exercise 3
-
