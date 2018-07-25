@@ -215,3 +215,31 @@ Basically, it's an easy and nicer way to write a string interpolating one or mor
     // Output:
     // My name is Robert and I am 20 years old
 ```
+
+# Arrow Functions
+
+Arrow functions or also called **fat arrow functions** are just a simple way to write conventional functions. These are always anonymous and they use a token like this: '=>'.
+
+```javascript
+
+const add = (a, b) => {
+    return a + b
+}
+
+console.log(add(1, 2))
+
+// Output:
+// 3
+```
+
+When we have a single javascript expression as above. We can do the same thing writing less code. Remove the return keyword and the curly braces.
+
+```javascript
+
+ const add = (a, b) => a + b
+
+ console.log(add(1, 2))
+
+ // Output:
+ // 3
+```
