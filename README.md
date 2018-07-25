@@ -243,3 +243,70 @@ When we have a single javascript expression as above. We can do the same thing w
  // Output:
  // 3
 ```
+
+# Enhanced Object Literals
+
+This make it easy and quickly create objects with key-value pair.
+
+### Rules:
+
+1. Whenever I have a key and a value with identical names, 
+you can condense it down to just the variable name itself.
+2. If you have a key-value pair, when the value is a function
+you can omit the function keyword and the colon.
+
+**ES5**
+```javascript
+function createBookShop(inventory) {
+    return {
+        inventory: inventory,
+        inventoryValue: function() {
+            return this.inventory.reduce((total, book) => total + book.price, 0)
+        },
+        priceForTitle: function(title) {
+            return this.inventory.find(book => book.title === title).price
+        }
+    }
+}
+
+const inventory = [
+    { title: 'Harry Potter', price: 10 },
+    { title: 'Eloquent Javascript', price: 15 }
+]
+
+const bookShop = createBookShop(inventory)
+
+console.log(bookShop.inventoryValue())
+console.log(bookShop.priceForTitle('Harry Potter'));
+// Output:
+// 25
+// 10
+```
+**ES6**
+
+```javascript
+function createBookShop(inventory) {
+    return {
+        inventory,
+        inventoryValue() {
+            return this.inventory.reduce((total, book) => total + book.price, 0)
+        },
+        priceForTitle(title) {
+            return this.inventory.find(book => book.title === title).price
+        }
+    }
+}
+
+const inventory = [
+    { title: 'Harry Potter', price: 10 },
+    { title: 'Eloquent Javascript', price: 15 }
+]
+
+const bookShop = createBookShop(inventory)
+
+console.log(bookShop.inventoryValue())
+console.log(bookShop.priceForTitle('Harry Potter'));
+// Output:
+// 25
+// 10
+```
