@@ -310,3 +310,65 @@ console.log(bookShop.priceForTitle('Harry Potter'));
 // 25
 // 10
 ```
+
+# Default Function Arguments
+
+This allow to initialize a paramater with a value if no value or undefined is passed to the argument function.
+
+**ES5**
+```javascript
+function makeAjaxRequest(url, method) {
+    if (!method) {
+        method = 'GET'
+    }
+}
+
+makeAjaxRequest('google.com')
+makeAjaxRequest('google.com', 'POST')
+```
+
+**ES6**
+```javascript
+function makeAjaxRequest(url, method = 'GET') {
+    return method
+}
+
+console.log(makeAjaxRequest('google.com'))
+console.log(makeAjaxRequest('google.com'), 'POST')
+
+// Output:
+// GET
+// POST
+```
+
+# Rest and Spread
+
+**ES5**
+```javascript
+const defaultColors = ['red', 'green']
+const favoriteColors = ['orange', 'yellow']
+
+console.log(defaultColors.concat(favoriteColors))
+
+// Output:
+// ['red', 'green', 'orange', 'yellow']
+```
+
+**ES6**
+```javascript
+const defaultColors = ['red', 'green']
+const favoriteColors = ['orange', 'yellow']
+
+console.log([...defaultColors, ...favoriteColors])
+
+// Output:
+// ['red', 'green', 'orange', 'yellow']
+
+// Also you can...
+
+console.log([ 'blue', ...defaultColors, ...favoriteColors ])
+
+// Output:
+// ['blue', 'red', 'green', 'orange', 'yellow']
+```
+
